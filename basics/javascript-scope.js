@@ -15,22 +15,24 @@ console.log(name); // global scope
 function India(x,y){
     // z is a local variable
     console.log(name);    // local scope
-    let Alia = x + y;   // the scope of this z variable is this function is only
+    var Alia = x + y;   // the scope of this z variable is this function is only
     return Alia;
 }
 
+// function scope works on all types of variables i.e., var, let and const
+// it est which means that is
 console.log(India(9,3));
 
-// console.log(Alia); // trying to get the value of z outside the function
+console.log(Alia); // trying to get the value of z outside the function
 
 // block scope --> if-else, for loop, while scope
-
+let actress = 'Maheder'; // global scope
 {
-    var actress = 'Kareena' // block scope and this variable is local variable
-    // console.log(actress)
+    let actress = 'Kareena' // block scope and this variable is local variable
+    console.log(actress)
 }
 
-console.log(actress);
+console.log(actress);  // global scope
 
 // let, const ,var
 
